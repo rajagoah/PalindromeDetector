@@ -13,4 +13,14 @@ print("the columns are --> \n", df[:0])
 df['ConcatenatedField'] = df['A'].map(str) + df['B'].map(str)
 
 for i in range(len(df)):
-    print(df['ConcatenatedField'])
+    print(df['ConcatenatedField'][i:i+1])
+    string = df['ConcatenatedField'][i:i+1].to_string()
+    print("******************************** THE STRAIGHT STRING IS *****************************")
+    print(string,'\n')
+    print("******************************** THE REVERSE STRING IS *****************************")
+    print(string[::-1])
+    print("******************************** STARTING THE IF CONDITION *****************************")
+    if string == str(string[::-1]):
+        print('yes')
+    else:
+        print('no')
