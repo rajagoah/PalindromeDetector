@@ -1,26 +1,16 @@
-import pandas as pd
+test_string = 'Arora'
 
-df = pd.read_csv('/Users/aakarsh.rajagopalan/Personal documents/Python projects/PalindromeDetector/PalindromeFile.csv')
-print("******************************** THE DATA FRAME IS *****************************")
-print(df)
-print("******************************** \n  ")
+rev = test_string[::-1]
+print(rev)
+if rev.lower() == test_string.lower():
+    print("yes")
+else:
+    print("no")
 
-#Practicing retrieving rows
-print("******************************** RETRIEVING THE RECORDS *****************************")
-print("using the .loc to retrieve the records --> \n", df.loc[df['A']==123])
-print("the columns are --> \n", df[:0])
-#creating a concatenated field
-df['ConcatenatedField'] = df['A'].map(str) + df['B'].map(str)
-
-for i in range(len(df)):
-    print(df['ConcatenatedField'][i:i+1])
-    string = df['ConcatenatedField'][i:i+1].to_string()
-    print("******************************** THE STRAIGHT STRING IS *****************************")
-    print(string,'\n')
-    print("******************************** THE REVERSE STRING IS *****************************")
-    print(string[::-1])
-    print("******************************** STARTING THE IF CONDITION *****************************")
-    if string == str(string[::-1]):
-        print('yes')
-    else:
-        print('no')
+#string[a:b:c] is a slicing notation that is used to describe how to slice through a string.
+#the 'c' indicates the increment integer value, a is the integer start value and b is integer end value
+print(reversed(test_string.lower()))
+if test_string.lower()==reversed(test_string.lower()):
+    print("yes")
+else:
+    print("no")
