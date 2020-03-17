@@ -1,0 +1,2 @@
+# PalindromeDetector
+Palindrome detector
